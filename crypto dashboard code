@@ -1,0 +1,90 @@
+heres the code of the edu in short as an example for a few cryptos
+
+
+pd.DataFrame(oneinch)
+oneinch['medium']=oneinch['high']+oneinch['low']
+print(oneinch)
+oneinch.describe()
+
+sns.set_style("darkgrid")
+
+# Select numerical columns (excluding 'ticker' and 'date')
+numerical_columns = ['open', 'high', 'low', 'close']
+
+# Plot histograms for numerical features
+plt.figure(figsize=(14, len(numerical_columns) * 3))
+for idx, feature in enumerate(numerical_columns, 1):
+    plt.subplot(len(numerical_columns), 1, idx)  # Single column for better readability
+    sns.histplot(oneinch[feature], kde=True, bins=50, color='red')
+    plt.title(f"Distribution of {feature} | Skewness: {round(oneinch[feature].skew(), 2)}")
+    plt.xlabel(feature)
+    plt.ylabel('frequency')
+
+plt.tight_layout()
+plt.show()
+
+
+pd.DataFrame(ada)
+ada['medium']=ada['high']+ada['low']
+print(ada)
+ada.describe()
+
+sns.set_style("darkgrid")
+
+# Select numerical columns (excluding 'ticker' and 'date')
+numerical_columns = ['open', 'high', 'low', 'close']
+
+# Plot histograms for numerical features
+plt.figure(figsize=(14, len(numerical_columns) * 3))
+for idx, feature in enumerate(numerical_columns, 1):
+    plt.subplot(len(numerical_columns), 1, idx)  # Single column for better readability
+    sns.histplot(ada[feature], kde=True, bins=50, color='yellow')
+    plt.title(f"Distribution of {feature} | Skewness: {round(ada[feature].skew(), 2)}")
+    plt.xlabel(feature)
+    plt.ylabel('Frequency')
+
+plt.tight_layout()
+plt.show()
+
+pd.DataFrame(algo)
+algo['medium']=algo['high']+algo['low']
+print(algo)
+algo.describe()
+
+
+sns.set_style("darkgrid")
+
+# Select numerical columns (excluding 'ticker' and 'date')
+numerical_columns = ['open', 'high', 'low', 'close']
+
+# Plot histograms for numerical features
+plt.figure(figsize=(14, len(numerical_columns) * 3))
+for idx, feature in enumerate(numerical_columns, 1):
+    plt.subplot(len(numerical_columns), 1, idx)  # Single column for better readability
+    sns.histplot(algo[feature], kde=True, bins=50, color='green')
+    plt.title(f"Distribution of {feature} | Skewness: {round(algo[feature].skew(), 2)}")
+    plt.xlabel(feature)
+    plt.ylabel('Frequency')
+
+plt.tight_layout()
+plt.show()
+
+print(nft)
+nft.describe()
+
+sns.set_style("darkgrid")
+
+# Select numerical columns (excluding 'ticker' and 'date')
+numerical_columns = ['open', 'high', 'low', 'close']
+
+# Plot histograms for numerical features
+plt.figure(figsize=(14, len(numerical_columns) * 3))
+for idx, feature in enumerate(numerical_columns, 1):
+    plt.subplot(len(numerical_columns), 1, idx)  # Single column for better readability
+    sns.histplot(nft[feature], kde=True, bins=50, color='green')
+    plt.title(f"Distribution of {feature} | Skewness: {round(nft[feature].skew(), 2)}")
+    plt.xlabel(feature)
+    plt.ylabel('Frequency')
+
+plt.tight_layout()
+plt.show()
